@@ -9,6 +9,7 @@
         /// Gets or sets the identifier of the user associated with this address.
         /// </summary>
         public int UserId { get; set; }
+        public User User { get; set; }
 
         /// <summary>
         /// Gets or sets the first line of the address.

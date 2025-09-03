@@ -54,10 +54,15 @@ billing_address_id int not null references addresses(address_id)
 );
 
 create table carts(
-quantity int not null default 1,
-[user_id] int not null references users([user_id]),
+cart_id int not null primary key identity(1,1),
+[user_id] int not null references users([user_id])
+);
+
+create table cart_product(
+cart_id int not null references carts(cart_id),
 product_id int not null references products(product_id),
-primary key ([user_id], product_id)
+quantity int not null default 1,
+primary key (cart_id, product_id)
 );
 
 create table product_order(

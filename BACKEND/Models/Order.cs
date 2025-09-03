@@ -9,6 +9,7 @@
         /// Gets or sets the identifier of the user who placed the order.
         /// </summary>
         public int UserId { get; set; }
+        public User User { get; set; }
 
         /// <summary>
         /// Gets or sets the total amount for the order.
@@ -34,5 +35,7 @@
         /// Gets or sets the identifier of the billing address for the order.
         /// </summary>
         public int BillingAddressId { get; set; }
+        public ICollection<ProductOrder> ProductOrders { get; set; }
+        public Payment Payment { get; set; }
     }
 }

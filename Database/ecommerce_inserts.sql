@@ -1,191 +1,206 @@
 
--- =================================================================
--- Passwords are fictional bcrypt hashes for 'password123'
--- =================================================================
 
 INSERT INTO users (first_name, last_name, email, password_hash, phone_number) VALUES
-('John', 'Smith', 'john.smith@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0101'),
-('Jane', 'Doe', 'jane.doe@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0102'),
-('Peter', 'Jones', 'peter.jones@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0103'),
-('Mary', 'Williams', 'mary.williams@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0104'),
-('David', 'Brown', 'david.brown@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0105'),
-('Susan', 'Davis', 'susan.davis@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0106'),
-('Michael', 'Miller', 'michael.miller@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0107'),
-('Linda', 'Wilson', 'linda.wilson@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0108'),
-('James', 'Moore', 'james.moore@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0109'),
-('Patricia', 'Taylor', 'patricia.taylor@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0110'),
-('Robert', 'Anderson', 'robert.anderson@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0111'),
-('Jennifer', 'Thomas', 'jennifer.thomas@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0112'),
-('William', 'Jackson', 'william.jackson@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0113'),
-('Elizabeth', 'White', 'elizabeth.white@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0114'),
-('Richard', 'Harris', 'richard.harris@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0115'),
-('Barbara', 'Martin', 'barbara.martin@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0116'),
-('Joseph', 'Thompson', 'joseph.thompson@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0117'),
-('Jessica', 'Garcia', 'jessica.garcia@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0118'),
-('Charles', 'Martinez', 'charles.martinez@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0119'),
-('Sarah', 'Robinson', 'sarah.robinson@example.com', '$2a$12$EaC5b8s2J5P2eW8h7d3fG.7qR4kL9wX1zY0uB3vA6cI9dO2eF4gH5', '555-0120');
+('Ana', 'Horvat', 'ana.horvat@example.com', 'hash_placeholder_1', '+385912345678'),
+('Ivan', 'Kovaèiæ', 'ivan.kovacic@example.com', 'hash_placeholder_2', '+385987654321'),
+('Petra', 'Novak', 'petra.novak@example.com', 'hash_placeholder_3', '+385951112233'),
+('Marko', 'Mariæ', 'marko.maric@example.com', 'hash_placeholder_4', '+385994455667'),
+('Jelena', 'Babiæ', 'jelena.babic@example.com', 'hash_placeholder_5', '+385923344556'),
+('Luka', 'Kovaèeviæ', 'luka.kovacevic@example.com', 'hash_placeholder_6', '+385978899001'),
+('Marija', 'Juriæ', 'marija.juric@example.com', 'hash_placeholder_7', '+385915566778'),
+('Filip', 'Horvat', 'filip.horvat@example.com', 'hash_placeholder_8', '+385981231234'),
+('Iva', 'Vukoviæ', 'iva.vukovic@example.com', 'hash_placeholder_9', '+385958765432'),
+('Tomislav', 'Kneževiæ', 'tomislav.knezevic@example.com', 'hash_placeholder_10', '+385993214321'),
+('Sara', 'Matiæ', 'sara.matic@example.com', 'hash_placeholder_11', '+385919876543'),
+('Nikola', 'Periæ', 'nikola.peric@example.com', 'hash_placeholder_12', '+385921122334'),
+('Katarina', 'Šimiæ', 'katarina.simic@example.com', 'hash_placeholder_13', '+385976543210'),
+('Domagoj', 'Petroviæ', 'domagoj.petrovic@example.com', 'hash_placeholder_14', '+385988877665'),
+('Lucija', 'Markoviæ', 'lucija.markovic@example.com', 'hash_placeholder_15', '+385955554433');
 
--- =================================================================
--- Addresses
--- Each user has a shipping and billing address.
--- =================================================================
 
 INSERT INTO addresses (user_id, address_line_1, city, postal_code, country, address_type) VALUES
-(1000, '123 Maple Street', 'Springfield', '12345', 'USA', 'shipping'),
-(1000, '123 Maple Street', 'Springfield', '12345', 'USA', 'billing'),
-(1001, '456 Oak Avenue', 'Shelbyville', '67890', 'USA', 'shipping'),
-(1001, '456 Oak Avenue', 'Shelbyville', '67890', 'USA', 'billing'),
-(1002, '789 Pine Lane', 'Capital City', '10112', 'USA', 'shipping'),
-(1002, '789 Pine Lane', 'Capital City', '10112', 'USA', 'billing'),
-(1003, '101 Elm Court', 'Ogdenville', '13141', 'USA', 'shipping'),
-(1003, '101 Elm Court', 'Ogdenville', '13141', 'USA', 'billing'),
-(1004, '212 Birch Road', 'North Haverbrook', '51617', 'USA', 'shipping'),
-(1004, '212 Birch Road', 'North Haverbrook', '51617', 'USA', 'billing'),
-(1005, '333 Cedar Blvd', 'Springfield', '12345', 'USA', 'shipping'),
-(1005, '333 Cedar Blvd', 'Springfield', '12345', 'USA', 'billing'),
-(1006, '444 Spruce Way', 'Shelbyville', '67890', 'USA', 'shipping'),
-(1006, '444 Spruce Way', 'Shelbyville', '67890', 'USA', 'billing'),
-(1007, '555 Redwood Dr', 'Capital City', '10112', 'USA', 'shipping'),
-(1007, '555 Redwood Dr', 'Capital City', '10112', 'USA', 'billing'),
-(1008, '666 Aspen St', 'Ogdenville', '13141', 'USA', 'shipping'),
-(1008, '666 Aspen St', 'Ogdenville', '13141', 'USA', 'billing'),
-(1009, '777 Sequoia Ave', 'North Haverbrook', '51617', 'USA', 'shipping'),
-(1009, '777 Sequoia Ave', 'North Haverbrook', '51617', 'USA', 'billing'),
-(1010, '888 Willow Creek', 'Springfield', '12345', 'USA', 'shipping'),
-(1010, '888 Willow Creek', 'Springfield', '12345', 'USA', 'billing'),
-(1011, '999 Cypress Garden', 'Shelbyville', '67890', 'USA', 'shipping'),
-(1011, '999 Cypress Garden', 'Shelbyville', '67890', 'USA', 'billing'),
-(1012, '111 Magnolia Pl', 'Capital City', '10112', 'USA', 'shipping'),
-(1012, '111 Magnolia Pl', 'Capital City', '10112', 'USA', 'billing'),
-(1013, '222 Juniper Cir', 'Ogdenville', '13141', 'USA', 'shipping'),
-(1013, '222 Juniper Cir', 'Ogdenville', '13141', 'USA', 'billing'),
-(1014, '321 Poplar St', 'North Haverbrook', '51617', 'USA', 'shipping'),
-(1014, '321 Poplar St', 'North Haverbrook', '51617', 'USA', 'billing'),
-(1015, '432 Holly Ln', 'Springfield', '12345', 'USA', 'shipping'),
-(1015, '432 Holly Ln', 'Springfield', '12345', 'USA', 'billing'),
-(1016, '543 Sycamore Rd', 'Shelbyville', '67890', 'USA', 'shipping'),
-(1016, '543 Sycamore Rd', 'Shelbyville', '67890', 'USA', 'billing'),
-(1017, '654 Fir Ave', 'Capital City', '10112', 'USA', 'shipping'),
-(1017, '654 Fir Ave', 'Capital City', '10112', 'USA', 'billing'),
-(1018, '765 Walnut Blvd', 'Ogdenville', '13141', 'USA', 'shipping'),
-(1018, '765 Walnut Blvd', 'Ogdenville', '13141', 'USA', 'billing'),
-(1019, '876 Chestnut Way', 'North Haverbrook', '51617', 'USA', 'shipping'),
-(1019, '876 Chestnut Way', 'North Haverbrook', '51617', 'USA', 'billing');
+-- User 1000 (Ana Horvat)
+(1000, 'Ilica 15', 'Zagreb', '10000', 'Croatia', 'shipping'),
+(1000, 'Trg Bana Jelaèiæa 1', 'Zagreb', '10000', 'Croatia', 'billing'),
+-- User 1001 (Ivan Kovaèiæ)
+(1001, 'Vukovarska 210', 'Split', '21000', 'Croatia', 'shipping'),
+(1001, 'Riva 5', 'Split', '21000', 'Croatia', 'billing'),
+-- User 1002 (Petra Novak)
+(1002, 'Korzo 33', 'Rijeka', '51000', 'Croatia', 'shipping'),
+(1002, 'Jadranski Trg 4', 'Rijeka', '51000', 'Croatia', 'billing'),
+-- User 1003 (Marko Mariæ)
+(1003, 'Kapucinska 25', 'Osijek', '31000', 'Croatia', 'shipping'),
+(1003, 'Trg Ante Starèeviæa 10', 'Osijek', '31000', 'Croatia', 'billing'),
+-- User 1004 (Jelena Babiæ)
+(1004, 'Stradun 12', 'Dubrovnik', '20000', 'Croatia', 'shipping'),
+(1004, 'Poljana Paska Milièeviæa 4', 'Dubrovnik', '20000', 'Croatia', 'billing'),
+-- User 1005 (Luka Kovaèeviæ)
+(1005, 'Preradoviæeva 5', 'Zagreb', '10000', 'Croatia', 'shipping'),
+(1005, 'Preradoviæeva 5', 'Zagreb', '10000', 'Croatia', 'billing'),
+-- User 1006 (Marija Juriæ)
+(1006, 'Marmontova ulica 3', 'Split', '21000', 'Croatia', 'shipping'),
+(1006, 'Marmontova ulica 3', 'Split', '21000', 'Croatia', 'billing'),
+-- User 1007 (Filip Horvat)
+(1007, 'Ulica Slobode 11', 'Split', '21000', 'Croatia', 'shipping'),
+(1007, 'Ulica Slobode 11', 'Split', '21000', 'Croatia', 'billing'),
+-- User 1008 (Iva Vukoviæ)
+(1008, 'Gunduliæeva 22', 'Zagreb', '10000', 'Croatia', 'shipping'),
+(1008, 'Gunduliæeva 22', 'Zagreb', '10000', 'Croatia', 'billing'),
+-- User 1009 (Tomislav Kneževiæ)
+(1009, 'Adamiæeva 17', 'Rijeka', '51000', 'Croatia', 'shipping'),
+(1009, 'Adamiæeva 17', 'Rijeka', '51000', 'Croatia', 'billing'),
+-- User 1010 (Sara Matiæ)
+(1010, 'Široka ulica 14', 'Zadar', '23000', 'Croatia', 'shipping'),
+(1010, 'Široka ulica 14', 'Zadar', '23000', 'Croatia', 'billing'),
+-- User 1011 (Nikola Periæ)
+(1011, 'Gajeva 2', 'Zagreb', '10000', 'Croatia', 'shipping'),
+(1011, 'Gajeva 2', 'Zagreb', '10000', 'Croatia', 'billing'),
+-- User 1012 (Katarina Šimiæ)
+(1012, 'Županijska 3', 'Osijek', '31000', 'Croatia', 'shipping'),
+(1012, 'Županijska 3', 'Osijek', '31000', 'Croatia', 'billing'),
+-- User 1013 (Domagoj Petroviæ)
+(1013, 'Bosanska 5', 'Split', '21000', 'Croatia', 'shipping'),
+(1013, 'Bosanska 5', 'Split', '21000', 'Croatia', 'billing'),
+-- User 1014 (Lucija Markoviæ)
+(1014, 'Tkalèiæeva 8', 'Zagreb', '10000', 'Croatia', 'shipping'),
+(1014, 'Tkalèiæeva 8', 'Zagreb', '10000', 'Croatia', 'billing');
 
--- =================================================================
--- Categories (5)
--- =================================================================
-
+-- Inserting 5 Categories
 INSERT INTO categories (category_name, description) VALUES
-('Electronics', 'Gadgets, devices, and all things electronic.'),
-('Books', 'Fiction, non-fiction, and everything in between.'),
-('Home & Kitchen', 'Appliances, decor, and tools for your home.'),
-('Apparel', 'Clothing for men, women, and children.'),
-('Sports & Outdoors', 'Gear for an active lifestyle, both indoors and out.');
+('Electronics', 'Gadgets, devices, and accessories to make your life easier and more fun.'),
+('Books', 'Physical copies of fiction, non-fiction, and educational books.'),
+('Clothing', 'Apparel for men, women, and children for all seasons.'),
+('Home & Garden', 'Products for decorating your home and tending your garden.'),
+('Sports & Outdoors', 'Equipment and apparel for your favorite sports and outdoor activities.');
+
+-- Inserting 50 Products
+-- Category 1: Electronics
+INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
+(1, 'Wireless Mouse', 'Ergonomic wireless mouse with a long-lasting battery.', 25.99, 'ELEC-WM-001', 150),
+(1, 'Bluetooth Headphones', 'Over-ear noise-cancelling Bluetooth headphones.', 79.99, 'ELEC-BTH-002', 80),
+(1, 'Mechanical Keyboard', 'RGB backlit mechanical keyboard with blue switches.', 65.50, 'ELEC-MK-003', 120),
+(1, '4K Webcam', 'Ultra HD 4K webcam for streaming and video conferencing.', 99.99, 'ELEC-WBC-004', 60),
+(1, 'USB-C Hub', '7-in-1 USB-C hub with HDMI, SD card reader, and USB 3.0 ports.', 35.00, 'ELEC-UCH-005', 200),
+(1, 'Portable Power Bank', '20000mAh portable power bank with fast charging.', 45.99, 'ELEC-PPB-006', 180),
+(1, 'Smartwatch', 'Fitness tracking smartwatch with heart rate monitor.', 129.99, 'ELEC-SW-007', 90),
+(1, 'Gaming Monitor', '27-inch 144Hz gaming monitor with 1ms response time.', 299.99, 'ELEC-GM-008', 40),
+(1, 'Wireless Earbuds', 'True wireless earbuds with charging case.', 55.00, 'ELEC-TWE-009', 250),
+(1, 'Tablet Stand', 'Adjustable aluminum tablet stand.', 19.99, 'ELEC-TS-010', 300);
+
+-- Category 2: Books
+INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
+(2, 'The Midnight Library', 'A novel by Matt Haig.', 15.99, 'BOOK-ML-001', 100),
+(2, 'Atomic Habits', 'An easy & proven way to build good habits & break bad ones by James Clear.', 18.50, 'BOOK-AH-002', 200),
+(2, 'Dune', 'Classic science fiction novel by Frank Herbert.', 12.99, 'BOOK-DN-003', 150),
+(2, 'Sapiens: A Brief History of Humankind', 'A book by Yuval Noah Harari.', 22.00, 'BOOK-SP-004', 120),
+(2, 'The Lord of the Rings', 'J.R.R. Tolkien''s fantasy epic.', 25.00, 'BOOK-LR-005', 90),
+(2, '1984', 'A dystopian novel by George Orwell.', 9.99, 'BOOK-1984-006', 300),
+(2, 'Pride and Prejudice', 'A classic romance novel by Jane Austen.', 8.50, 'BOOK-PP-007', 250),
+(2, 'To Kill a Mockingbird', 'A novel by Harper Lee.', 11.25, 'BOOK-TKM-008', 180),
+(2, 'The Great Gatsby', 'A novel by F. Scott Fitzgerald.', 10.00, 'BOOK-GG-009', 220),
+(2, 'The Hobbit', 'A fantasy novel by J.R.R. Tolkien.', 13.50, 'BOOK-HB-010', 170);
+
+-- Category 3: Clothing
+INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
+(3, 'Men''s Cotton T-Shirt', 'A classic crew neck t-shirt made of 100% cotton.', 19.99, 'CLO-MCT-001', 500),
+(3, 'Women''s Denim Jeans', 'High-waisted skinny fit denim jeans.', 49.99, 'CLO-WDJ-002', 300),
+(3, 'Unisex Hoodie', 'A comfortable fleece-lined hoodie.', 39.99, 'CLO-UH-003', 400),
+(3, 'Men''s Leather Belt', 'Genuine leather belt with a classic buckle.', 29.50, 'CLO-MLB-004', 200),
+(3, 'Women''s Summer Dress', 'A light and airy floral summer dress.', 55.00, 'CLO-WSD-005', 150),
+(3, 'Running Shoes', 'Lightweight and breathable running shoes for men and women.', 89.99, 'CLO-RS-006', 250),
+(3, 'Winter Scarf', 'A warm and soft knitted winter scarf.', 24.99, 'CLO-WS-007', 350),
+(3, 'Men''s Chino Shorts', 'Comfortable and stylish chino shorts.', 34.00, 'CLO-MCS-008', 180),
+(3, 'Women''s Blouse', 'An elegant silk blouse for work or casual wear.', 45.00, 'CLO-WB-009', 120),
+(3, 'Pack of 3 Socks', 'Cotton-blend ankle socks.', 12.99, 'CLO-P3S-010', 600);
+
+-- Category 4: Home & Garden
+INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
+(4, 'Scented Candle', 'Lavender scented soy wax candle.', 15.99, 'HG-SC-001', 400),
+(4, 'Ceramic Plant Pot', 'A modern ceramic pot for indoor plants.', 22.50, 'HG-CPP-002', 250),
+(4, 'Kitchen Knife Set', 'A 5-piece stainless steel kitchen knife set with a wooden block.', 79.99, 'HG-KNS-003', 100),
+(4, 'Plush Throw Blanket', 'A soft and cozy fleece throw blanket.', 35.00, 'HG-PTB-004', 300),
+(4, 'Garden Tool Set', 'A 3-piece set including a trowel, transplanter, and cultivator.', 29.99, 'HG-GTS-005', 180),
+(4, 'Picture Frame', 'A wooden 8x10 picture frame.', 18.00, 'HG-PF-006', 500),
+(4, 'Wall Clock', 'A minimalist 12-inch wall clock.', 40.00, 'HG-WC-007', 150),
+(4, 'Bamboo Cutting Board', 'An extra-large organic bamboo cutting board.', 25.99, 'HG-BCB-008', 220),
+(4, 'LED Desk Lamp', 'A modern LED desk lamp with adjustable brightness.', 32.50, 'HG-LDL-009', 190),
+(4, 'Door Mat', 'A durable coir doormat with a non-slip backing.', 19.99, 'HG-DM-010', 350);
+
+-- Category 5: Sports & Outdoors
+INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
+(5, 'Yoga Mat', 'An extra-thick, non-slip yoga mat.', 30.00, 'SO-YM-001', 200),
+(5, '2-Person Camping Tent', 'A lightweight, waterproof tent for two people.', 120.00, 'SO-TCT-002', 70),
+(5, 'Insulated Water Bottle', 'A 32 oz stainless steel insulated water bottle.', 25.00, 'SO-IWB-003', 600),
+(5, 'Hiking Backpack', 'A 40L durable backpack for hiking and travel.', 75.50, 'SO-HB-004', 130),
+(5, 'Bicycle Helmet', 'An adjustable and ventilated helmet for cycling.', 45.00, 'SO-BH-005', 180),
+(5, 'Jump Rope', 'A speed jump rope with adjustable length.', 14.99, 'SO-JR-006', 400),
+(5, 'Resistance Bands Set', 'A set of 5 resistance loop bands for exercise.', 18.99, 'SO-RBS-007', 300),
+(5, 'Soccer Ball', 'A standard size 5 soccer ball.', 22.00, 'SO-SB-008', 250),
+(5, 'Camping Chair', 'A portable and foldable camping chair.', 35.00, 'SO-CC-009', 150),
+(5, 'Fishing Rod Combo', 'A telescopic fishing rod and reel combo kit.', 65.00, 'SO-FRC-010', 90);
 
 -- =================================================================
--- Products (50)
--- =================================================================
+-- Creating a cart for each user
+INSERT INTO carts (user_id) VALUES
+(1000), (1001), (1002), (1003), (1004), (1005), (1006), (1007),
+(1008), (1009), (1010), (1011), (1012), (1013), (1014);
 
--- Electronics (Category 1)
-INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
-(1, 'Wireless Noise-Cancelling Headphones', 'Immerse yourself in sound with these premium headphones.', 299.99, 'ELEC-HDPH-001', 150),
-(1, '4K Ultra HD Smart TV', 'Experience stunning visuals with this 55-inch smart TV.', 499.50, 'ELEC-TV-002', 80),
-(1, 'Smartphone Pro', 'The latest in mobile technology with a stunning camera.', 999.00, 'ELEC-SPHN-003', 200),
-(1, 'Gaming Laptop', 'High-performance laptop for the ultimate gaming experience.', 1499.99, 'ELEC-LPT-004', 45),
-(1, 'Smartwatch Series X', 'Track your fitness, notifications, and more from your wrist.', 249.00, 'ELEC-SWCH-005', 300),
-(1, 'Bluetooth Speaker', 'Portable and powerful sound for any occasion.', 79.99, 'ELEC-SPKR-006', 450),
-(1, 'Digital Camera', 'Capture life''s moments in beautiful high resolution.', 650.00, 'ELEC-CAM-007', 70),
-(1, 'E-Reader', 'Carry thousands of books in one lightweight device.', 129.99, 'ELEC-ERDR-008', 250),
-(1, 'Wireless Charging Pad', 'Conveniently charge your devices without cables.', 39.99, 'ELEC-CHGR-009', 600),
-(1, 'Computer Monitor', '27-inch QHD monitor for work and play.', 320.00, 'ELEC-MON-010', 120);
+-- Adding some products to a few carts
+-- Cart 1 (User 1000)
+INSERT INTO cart_product (cart_id, product_id, quantity) VALUES
+(1, 1001, 1), -- Bluetooth Headphones
+(1, 1010, 1); -- The Midnight Library
+-- Cart 3 (User 1002)
+INSERT INTO cart_product (cart_id, product_id, quantity) VALUES
+(3, 1020, 2), -- Men's Cotton T-Shirt
+(3, 1021, 1); -- Women's Denim Jeans
+-- Cart 5 (User 1004)
+INSERT INTO cart_product (cart_id, product_id, quantity) VALUES
+(5, 1040, 1), -- Yoga Mat
+(5, 1042, 1); -- Insulated Water Bottle
 
--- Books (Category 2)
-INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
-(2, 'The Midnight Library', 'A novel by Matt Haig.', 15.99, 'BOOK-FIC-001', 500),
-(2, 'Atomic Habits', 'An Easy & Proven Way to Build Good Habits & Break Bad Ones by James Clear.', 19.50, 'BOOK-NONFIC-002', 800),
-(2, 'Dune', 'Classic science fiction novel by Frank Herbert.', 22.00, 'BOOK-SCIFI-003', 350),
-(2, 'The Silent Patient', 'A psychological thriller by Alex Michaelides.', 14.75, 'BOOK-THR-004', 420),
-(2, 'Sapiens: A Brief History of Humankind', 'By Yuval Noah Harari.', 25.00, 'BOOK-HIST-005', 600),
-(2, 'Where the Crawdads Sing', 'A novel by Delia Owens.', 18.00, 'BOOK-FIC-006', 750),
-(2, 'Educated: A Memoir', 'A memoir by Tara Westover.', 17.99, 'BOOK-MEM-007', 300),
-(2, 'The Lord of the Rings', 'J.R.R. Tolkien''s epic fantasy saga.', 35.50, 'BOOK-FNT-008', 250),
-(2, 'Becoming', 'The memoir of former First Lady Michelle Obama.', 21.99, 'BOOK-MEM-009', 480),
-(2, 'A Brief History of Time', 'From the Big Bang to Black Holes by Stephen Hawking.', 16.25, 'BOOK-SCI-010', 200);
+-- Order 1 for User 1001 (Ivan Kovaèiæ)
+INSERT INTO orders (user_id, total_amount, order_status, shipping_address_id, billing_address_id, order_date) VALUES
+(1001, 114.98, 'completed', 3, 4, '2025-08-15 10:30:00');
+INSERT INTO product_order (order_id, product_id, price, quantity) VALUES
+(1000, 1001, 79.99, 1), -- Bluetooth Headphones
+(1000, 1030, 34.99, 1); -- Plush Throw Blanket (Price slightly different at time of purchase)
+INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES
+(1001, 1000, 'Credit Card', 114.98, 'completed', '2025-08-15 10:31:00');
 
--- Home & Kitchen (Category 3)
-INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
-(3, 'Espresso Machine', 'Brew barista-quality coffee at home.', 199.99, 'HOME-COFF-001', 110),
-(3, 'Air Fryer', 'A healthier way to enjoy your favorite fried foods.', 89.95, 'HOME-FRY-002', 220),
-(3, 'Robotic Vacuum Cleaner', 'Automatically cleans your floors.', 275.00, 'HOME-VAC-003', 90),
-(3, 'Stand Mixer', 'The perfect kitchen companion for baking.', 349.99, 'HOME-MIX-004', 60),
-(3, 'Chef''s Knife', 'High-carbon stainless steel knife for all your chopping needs.', 55.00, 'HOME-KNFE-005', 400),
-(3, 'Non-Stick Cookware Set', '10-piece set for everyday cooking.', 150.00, 'HOME-COOK-006', 150),
-(3, 'Electric Kettle', 'Quickly boil water for tea, coffee, or oatmeal.', 29.99, 'HOME-KTL-007', 500),
-(3, 'Blender', 'Powerful blender for smoothies, soups, and more.', 120.00, 'HOME-BLND-008', 180),
-(3, 'Weighted Blanket', 'Improve your sleep with a calming weighted blanket.', 79.99, 'HOME-BED-009', 250),
-(3, 'Digital Food Scale', 'Accurate measurements for perfect recipes.', 19.99, 'HOME-SCL-010', 700);
+-- Order 2 for User 1003 (Marko Mariæ)
+INSERT INTO orders (user_id, total_amount, order_status, shipping_address_id, billing_address_id, order_date) VALUES
+(1003, 120.99, 'shipped', 7, 8, '2025-08-20 14:00:00');
+INSERT INTO product_order (order_id, product_id, price, quantity) VALUES
+(1001, 1011, 18.50, 1), -- Atomic Habits
+(1001, 1041, 120.00, 1); -- 2-Person Camping Tent
+INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES
+(1003, 1001, 'PayPal', 138.50, 'completed', '2025-08-20 14:01:00');
 
--- Apparel (Category 4)
-INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
-(4, 'Men''s Classic T-Shirt', 'A comfortable and stylish 100% cotton t-shirt.', 19.99, 'APRL-M-TSHT-001', 1000),
-(4, 'Women''s High-Waist Jeans', 'Flattering and durable denim jeans.', 59.50, 'APRL-W-JEAN-002', 600),
-(4, 'Running Shoes', 'Lightweight and supportive shoes for runners.', 120.00, 'APRL-U-SHOE-003', 450),
-(4, 'Winter Jacket', 'Waterproof and insulated jacket for cold weather.', 180.00, 'APRL-U-JKT-004', 200),
-(4, 'Leather Belt', 'Classic genuine leather belt.', 35.00, 'APRL-M-BELT-005', 800),
-(4, 'Summer Dress', 'A light and airy dress perfect for warm days.', 45.00, 'APRL-W-DRSS-006', 350),
-(4, 'Wool Socks', 'Warm and comfortable merino wool socks (3-pack).', 25.00, 'APRL-U-SOCK-007', 1200),
-(4, 'Men''s Chino Pants', 'Versatile and stylish pants for any occasion.', 49.99, 'APRL-M-PANT-008', 550),
-(4, 'Women''s Blouse', 'Elegant silk blouse for work or evening wear.', 65.00, 'APRL-W-BLS-009', 400),
-(4, 'Baseball Cap', 'Classic adjustable cotton baseball cap.', 15.00, 'APRL-U-HAT-010', 900);
 
--- Sports & Outdoors (Category 5)
-INSERT INTO products (category_id, name, description, price, sku, stock_quantity) VALUES
-(5, 'Yoga Mat', 'Eco-friendly, non-slip mat for yoga and exercise.', 29.99, 'SPRT-YOGA-001', 800),
-(5, '2-Person Camping Tent', 'Lightweight, waterproof tent for backpacking.', 129.99, 'SPRT-CAMP-002', 150),
-(5, 'Insulated Water Bottle', 'Keeps drinks cold for 24 hours or hot for 12.', 24.50, 'SPRT-BTL-003', 1500),
-(5, 'Hiking Backpack', '50L backpack with multiple compartments and rain cover.', 85.00, 'SPRT-PACK-004', 300),
-(5, 'Adjustable Dumbbells', 'Set of two adjustable dumbbells, up to 50 lbs each.', 399.00, 'SPRT-FIT-005', 75),
-(5, 'Basketball', 'Official size and weight basketball.', 29.99, 'SPRT-BALL-006', 600),
-(5, 'Bicycle Helmet', 'Safety certified helmet with enhanced ventilation.', 49.99, 'SPRT-BIKE-007', 400),
-(5, 'Fishing Rod and Reel Combo', 'A great starter kit for any angler.', 75.00, 'SPRT-FISH-008', 220),
-(5, 'Jump Rope', 'Adjustable speed rope for cardio workouts.', 12.99, 'SPRT-FIT-009', 1000),
-(5, 'Sleeping Bag', '3-season sleeping bag for camping comfort.', 99.99, 'SPRT-CAMP-010', 180);
+-- Order 3 for User 1004 (Jelena Babiæ)
+INSERT INTO orders (user_id, total_amount, order_status, shipping_address_id, billing_address_id, order_date) VALUES
+(1004, 84.98, 'processing', 9, 10, '2025-09-01 09:15:00');
+INSERT INTO product_order (order_id, product_id, price, quantity) VALUES
+(1002, 1024, 55.00, 1), -- Women's Summer Dress
+(1002, 1026, 29.98, 1); -- Winter Scarf (Price slightly different at time of purchase)
+INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES
+(1004, 1002, 'Credit Card', 84.98, 'completed', '2025-09-01 09:16:00');
 
--- =================================================================
--- Orders, Product_Order, and Payments
--- A few sample orders to link everything together.
--- =================================================================
 
--- Order 1000 for John Smith (user_id 1000)
-INSERT INTO orders (user_id, total_amount, order_status, order_date, shipping_address_id, billing_address_id) VALUES (1000, 315.98, 'completed', '2025-08-10 10:30:00', 1, 2);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1000, 1000, 299.99, 1);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1010, 1000, 15.99, 1);
-INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES (1000, 1000, 'Credit Card', 315.98, 'completed', '2025-08-10 10:31:00');
+-- Order 4 for User 1007 (Filip Horvat)
+INSERT INTO orders (user_id, total_amount, order_status, shipping_address_id, billing_address_id, order_date) VALUES
+(1007, 39.98, 'pending', 15, 16, '2025-09-02 11:05:00');
+INSERT INTO product_order (order_id, product_id, price, quantity) VALUES
+(1003, 1020, 19.99, 2); -- Men's Cotton T-Shirt
+INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES
+(1007, 1003, 'Stripe', 39.98, 'pending', '2025-09-02 11:06:00');
 
--- Order 1001 for Jane Doe (user_id 1001)
-INSERT INTO orders (user_id, total_amount, order_status, order_date, shipping_address_id, billing_address_id) VALUES (1001, 109.94, 'shipped', '2025-08-12 14:00:00', 3, 4);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1021, 1001, 89.95, 1);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1029, 1001, 19.99, 1);
-INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES (1001, 1001, 'PayPal', 109.94, 'completed', '2025-08-12 14:01:00');
-
--- Order 1002 for Peter Jones (user_id 1002)
-INSERT INTO orders (user_id, total_amount, order_status, order_date, shipping_address_id, billing_address_id) VALUES (1002, 295.00, 'processing', '2025-08-15 09:15:00', 5, 6);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1032, 1002, 120.00, 1);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1034, 1002, 35.00, 1);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1040, 1002, 29.99, 1);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1042, 1002, 24.50, 2);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1048, 1002, 12.99, 2);
-INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES (1002, 1002, 'Credit Card', 295.00, 'completed', '2025-08-15 09:16:00');
-
--- Order 1003 for Mary Williams (user_id 1003)
-INSERT INTO orders (user_id, total_amount, order_status, order_date, shipping_address_id, billing_address_id) VALUES (1003, 999.00, 'cancelled', '2025-08-20 11:00:00', 7, 8);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1002, 1003, 999.00, 1);
-INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES (1003, 1003, 'Credit Card', 999.00, 'refunded', '2025-08-20 11:01:00');
-
--- Order 1004 for Robert Anderson (user_id 1010)
-INSERT INTO orders (user_id, total_amount, order_status, order_date, shipping_address_id, billing_address_id) VALUES (1010, 52.49, 'shipped', '2025-08-21 18:45:00', 21, 22);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1012, 1004, 22.00, 1);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1019, 1004, 16.25, 1);
-INSERT INTO product_order (product_id, order_id, price, quantity) VALUES (1048, 1004, 12.99, 1);
-INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES (1010, 1004, 'Debit Card', 52.49, 'completed', '2025-08-21 18:46:00');
+-- Order 5 for User 1010 (Sara Matiæ)
+INSERT INTO orders (user_id, total_amount, order_status, shipping_address_id, billing_address_id, order_date) VALUES
+(1010, 105.98, 'shipped', 21, 22, '2025-08-28 18:45:00');
+INSERT INTO product_order (order_id, product_id, price, quantity) VALUES
+(1004, 1003, 65.50, 1), -- Mechanical Keyboard
+(1004, 1004, 40.48, 1); -- 4K Webcam (Price slightly different at time of purchase)
+INSERT INTO payments (user_id, order_id, pay_method, total_amount, payment_status, payment_date) VALUES
+(1010, 1004, 'Credit Card', 105.98, 'completed', '2025-08-28 18:46:00');

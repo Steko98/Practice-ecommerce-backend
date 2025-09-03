@@ -29,5 +29,10 @@
         /// Gets or sets the user's phone number.
         /// </summary>
         public string? PhoneNumber { get; set; }
+        public ICollection<Address> Addresses { get; set; }
+        public ICollection<Order> Orders { get; set; }
+        public ICollection<Payment> Payments { get; set; }
+        public ICollection<Cart> Carts { get; set; }
+
     }
 }

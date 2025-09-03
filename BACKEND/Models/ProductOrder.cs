@@ -9,10 +9,12 @@
         /// Gets or sets the identifier of the product placed in the order
         /// </summary>
         public int ProductId { get; set; }
+        public Product Product { get; set; }
         /// <summary>
         /// Gets or sets the order identifier
         /// </summary>
         public int OrderId { get; set; }
+        public Order Order { get; set; }
         /// <summary>
         /// Gets or sets the price of the product placed in the order
         /// </summary>
