@@ -33,7 +33,7 @@
         /// <summary>
         /// Gets or sets the image URL of the product.
         /// </summary>
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
         /// <summary>
         /// Gets or sets the identifier of the product category
         /// </summary>
