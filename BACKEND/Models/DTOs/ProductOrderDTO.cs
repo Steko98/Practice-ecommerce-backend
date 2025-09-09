@@ -1,10 +1,10 @@
 ﻿namespace BACKEND.Models.DTOs
 {
-    public record OrderItemDTOAdminRead(
+    public record ProductOrderDTO(
         int ProductId,
         string Name,
         decimal Price,
         int Quantity,
-        string Sku
+        string ImageUrl
         );
 }

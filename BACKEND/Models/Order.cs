@@ -19,7 +19,7 @@
         /// <summary>
         /// Gets or sets the status of the order.
         /// </summary>
-        public string OrderStatus { get; set; } = "";
+        public OrderStatus OrderStatus { get; set; }
 
         /// <summary>
         /// Gets or sets the date and time when the order was placed.
@@ -30,11 +30,13 @@
         /// Gets or sets the identifier of the shipping address for the order.
         /// </summary>
         public int ShippingAddressId { get; set; }
+        public Address ShippingAddress { get; set; }
 
         /// <summary>
         /// Gets or sets the identifier of the billing address for the order.
         /// </summary>
         public int BillingAddressId { get; set; }
+        public Address BillingAddress { get; set; }
         public ICollection<ProductOrder> ProductOrders { get; set; }
         public Payment Payment { get; set; }
     }

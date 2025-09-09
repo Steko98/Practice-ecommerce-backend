@@ -8,6 +8,6 @@
         DateTime OrderDate,
         AddressDTORead ShippingAddress,
         AddressDTORead BillingAddress,
-        List<OrderItemDTOAdminRead> Products
+        List<ProductOrderDTOAdminRead> Products
         );
 }

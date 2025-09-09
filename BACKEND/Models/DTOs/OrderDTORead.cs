@@ -7,6 +7,6 @@
         DateTime OrderDate,
         AddressDTORead ShippingAddress,
         AddressDTORead BillingAddress,
-        List<OrderItemDTO> Items
+        List<ProductOrderDTO> Products
         );
 }

@@ -8,7 +8,7 @@
         string Sku,
         int StockQuantity,
         string ImageUrl,
-        int CategoryId,
-        string CategoryName
+        List<int> CategoryIds,
+        List<string> CategoryNames
         );
 }
