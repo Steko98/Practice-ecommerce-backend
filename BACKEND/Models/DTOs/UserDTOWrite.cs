@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BACKEND.Models.DTOs
 {
-    public class UserDTORegister
+    public class UserDTOWrite
     {
         [Required]
         [MaxLength(50)]
@@ -18,5 +18,6 @@ namespace BACKEND.Models.DTOs
         [Required]
         [MinLength(8)]
         public string Password { get; set; }
+        public string PhoneNumber { get; set; } = "";
     }
 }

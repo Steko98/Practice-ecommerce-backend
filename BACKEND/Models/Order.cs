@@ -37,7 +37,7 @@
         /// </summary>
         public int BillingAddressId { get; set; }
         public Address BillingAddress { get; set; }
-        public ICollection<ProductOrder> ProductOrders { get; set; }
+        public ICollection<ProductOrder> ProductOrders { get; set; } = new List<ProductOrder>();
         public Payment Payment { get; set; }
     }
 }

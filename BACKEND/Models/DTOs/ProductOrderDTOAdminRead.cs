@@ -2,6 +2,7 @@
 {
     public record ProductOrderDTOAdminRead(
         int ProductId,
+        int OrderId,
         string Name,
         decimal Price,
         int Quantity,

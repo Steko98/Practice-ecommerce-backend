@@ -14,6 +14,6 @@
         /// Gets or sets the description of the category.
         /// </summary>
         public string? Description { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Product> Products { get; set; } = new List<Product>();
     }
 }
