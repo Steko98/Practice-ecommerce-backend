@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a shopping cart entry for a user and product.
     /// </summary>
-    public class Cart
+    public class Cart : Entity
     {
         /// <summary>
         /// Gets or sets the user identifier associated with the cart entry.

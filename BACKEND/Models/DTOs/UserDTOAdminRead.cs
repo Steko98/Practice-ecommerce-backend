@@ -5,7 +5,8 @@
         string FirstName,
         string LastName,
         string Email,
-        string PhoneNumber
+        string PhoneNumber,
+        bool IsDeleted
     );
 
 }

@@ -18,5 +18,21 @@ namespace BACKEND.Data
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<ProductOrder> ProductOrders { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CartProduct>()
+                .HasKey(cp => new { cp.CartId, cp.ProductId });
+
+            modelBuilder.Entity<CartProduct>()
+                .HasOne(cp => cp.Cart)
+                .WithMany(c => c.CartProducts)
+                .HasForeignKey(cp => cp.CartId);
+
+            modelBuilder.Entity<CartProduct>()
+                .HasOne(cp => cp.Product)
+                .WithMany()
+                .HasForeignKey(cp => cp.ProductId);
+        }
     }
 }

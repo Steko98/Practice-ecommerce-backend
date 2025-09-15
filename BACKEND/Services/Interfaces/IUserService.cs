@@ -4,7 +4,6 @@ namespace BACKEND.Services.Interfaces
 {
     public interface IUserService
     {
-        Task<List<UserDTORead>> GetAllAsync();
         Task<List<UserDTOAdminRead>> AdminGetAllAsync();
         Task<UserDTORead?> GetByIdAsync(int id);
         Task<UserDTOAdminRead?> AdminGetByIdAsync(int id);

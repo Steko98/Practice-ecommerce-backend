@@ -34,5 +34,7 @@
         public ICollection<Payment> Payments { get; set; } = new List<Payment>();
         public ICollection<Cart> Carts { get; set; } = new List<Cart>();
 
+        public bool IsDeleted { get; set; } = false;
+
     }
 }
