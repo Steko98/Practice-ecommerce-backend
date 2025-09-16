@@ -75,11 +75,10 @@ namespace BACKEND.Mapping
                 .ForCtorParam("ImageUrl", opt => opt.MapFrom(src => src.Product.ImageUrl));
             CreateMap<CartProductDTOWrite, CartProduct>();
             CreateMap<Cart, CartDTORead>()
-                .ForCtorParam("CartId", opt => opt.MapFrom(src => src.Id))
-                .ForCtorParam("Products", opt => opt.MapFrom(src => src.CartProducts))
-                    .ForCtorParam("TotalAmount", opt => opt.MapFrom(
-        src => src.CartProducts.Sum(cp => cp.Product.Price * cp.Quantity)
-    ));
+                .ForMember(dest => dest.CartId, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Products, opt => opt.MapFrom(src => src.CartProducts))
+                .ForMember(dest => dest.TotalAmount, opt => opt.MapFrom(
+                    src => src.CartProducts.Sum(cp => cp.Product.Price * cp.Quantity)));
             CreateMap<CartDTOWrite, Cart>();
         }
 

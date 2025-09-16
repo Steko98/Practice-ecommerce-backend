@@ -5,6 +5,8 @@ namespace BACKEND.Models.DTOs
     public class AddressDTOWrite
     {
         [Required]
+        public int UserId { get; set; }
+        [Required]
         [MaxLength(255)]
         public string AddressLine1 { get; set; }
         [MaxLength(255)]

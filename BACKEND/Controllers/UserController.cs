@@ -22,7 +22,7 @@ namespace BACKEND.Controllers
             return Ok(users);
         }
 
-        [HttpGet("admin/{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<UserDTORead>> GetById(int id)
         {
             var user = await _userService.GetByIdAsync(id);
@@ -33,7 +33,7 @@ namespace BACKEND.Controllers
             return Ok(user);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("admin/{id}")]
         public async Task<ActionResult<UserDTOAdminRead>> AdminGetById(int id)
         {
             var user = await _userService.AdminGetByIdAsync(id);
@@ -75,10 +75,6 @@ namespace BACKEND.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
             var result = await _userService.DeleteAsync(id);
             if (!result)
             {

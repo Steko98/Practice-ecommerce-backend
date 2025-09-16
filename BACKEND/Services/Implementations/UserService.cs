@@ -3,8 +3,6 @@ using BACKEND.Data;
 using BACKEND.Models;
 using BACKEND.Models.DTOs;
 using BACKEND.Services.Interfaces;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BACKEND.Services.Implementations
@@ -28,7 +26,6 @@ namespace BACKEND.Services.Implementations
 
             var users = await _context.Users
                 .AsNoTracking()
-                .Where(u => !u.IsDeleted)
                 .ToListAsync();
 
             return _mapper.Map<List<UserDTOAdminRead>>(users);
@@ -55,7 +52,7 @@ namespace BACKEND.Services.Implementations
 
             var user = await _context.Users
                 .AsNoTracking()
-                .SingleOrDefaultAsync(u => u.Id == id && !u.IsDeleted);
+                .SingleOrDefaultAsync(u => u.Id == id);
 
             if (user == null)
             {
