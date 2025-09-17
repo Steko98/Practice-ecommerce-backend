@@ -26,6 +26,7 @@ namespace BACKEND.Services.Implementations
 
             var addresses = await _context.Addresses
                 .AsNoTracking()
+                .Include(a => a.User)
                 .ToListAsync();
         
             return _mapper.Map<List<AddressDTORead>>( addresses );
@@ -37,6 +38,7 @@ namespace BACKEND.Services.Implementations
 
             var address = await _context.Addresses
                 .AsNoTracking()
+                .Include(a => a.User)
                 .SingleOrDefaultAsync(a => a.Id == id);
             if (address == null)
             {

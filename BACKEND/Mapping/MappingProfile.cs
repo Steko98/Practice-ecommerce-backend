@@ -22,11 +22,13 @@ namespace BACKEND.Mapping
                 .ForCtorParam("ProductId", opt => opt.MapFrom(src => src.Id));
             CreateMap<Product, ProductDTOAdminRead>()
                 .ForCtorParam("ProductId", opt => opt.MapFrom(src => src.Id))
-                .ForCtorParam("CategoryIds", opt => opt.MapFrom(src => src.Categories.Select(c => c.Id).ToList()))
-                .ForCtorParam("CategoryNames", opt => opt.MapFrom(src => src.Categories.Select(c=>c.CategoryName).ToList()));
+                .ForCtorParam("CategoryId", opt => opt.MapFrom(src => src.CategoryId))
+                .ForCtorParam("CategoryName", opt => opt.MapFrom(src => src.Category.CategoryName));
             CreateMap<ProductDTOAdminWrite, Product>();
 
             CreateMap<Address, AddressDTORead>()
+                .ForCtorParam("UserName", opt => opt.MapFrom(src => src.User.FirstName))
+                .ForCtorParam("UserLastName", opt => opt.MapFrom(src => src.User.LastName))
                 .ForCtorParam("AddressId", opt => opt.MapFrom(src => src.Id));
             CreateMap<AddressDTOWrite, Address>();
 

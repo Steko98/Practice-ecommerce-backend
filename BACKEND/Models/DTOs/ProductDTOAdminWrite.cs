@@ -15,7 +15,7 @@ namespace BACKEND.Models.DTOs
         [Required]
         public int StockQuantity { get; set; }
         [Required]
-        public List<int> CategoryIds { get; set; }
+        public int CategoryId { get; set; }
         public string ImageUrl { get; set; }
     }
 }

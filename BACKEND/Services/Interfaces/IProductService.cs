@@ -10,6 +10,6 @@ namespace BACKEND.Services.Interfaces
         Task<ProductDTOAdminRead?> AdminGetByIdAsync(int id);
         Task<ProductDTOAdminRead> CreateAsync(ProductDTOAdminWrite dto);
         Task<ProductDTOAdminRead> UpdateAsync(int id, ProductDTOAdminWrite dto);
-        Task<OrderDTORead?> DeleteAsync(int id);
+        Task<bool> DeleteAsync(int id);
     }
 }

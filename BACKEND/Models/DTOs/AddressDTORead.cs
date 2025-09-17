@@ -1,6 +1,8 @@
 ﻿namespace BACKEND.Models.DTOs
 {
     public record AddressDTORead(
+        string UserName,
+        string UserLastName,
         int AddressId,
         string AddressLine1,
         string AddressLine2,

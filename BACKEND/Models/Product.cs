@@ -38,7 +38,7 @@
         /// Gets or sets the identifier of the product category
         /// </summary>
         public int CategoryId { get; set; }
-        public ICollection<Category> Categories { get; set; } = new List<Category>();
+        public Category Category { get; set; }
         public ICollection<ProductOrder> ProductOrders { get; set; } = new List<ProductOrder>();
         public ICollection<CartProduct> CartProducts { get; set; } = new List<CartProduct>();
     }

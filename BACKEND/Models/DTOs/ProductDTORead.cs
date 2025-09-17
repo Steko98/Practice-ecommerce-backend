@@ -5,6 +5,7 @@
         string Name,
         string Description,
         decimal Price,
+        int CategoryId,
         string ImageUrl
         );
 }
