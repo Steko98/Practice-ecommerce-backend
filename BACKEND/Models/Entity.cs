@@ -11,6 +11,6 @@ namespace BACKEND.Models
         /// Gets or sets the unique identifier for the entity.
         /// </summary>
         [Key]
-        public int? Id { get; set; }
+        public int Id { get; set; }
     }
 }

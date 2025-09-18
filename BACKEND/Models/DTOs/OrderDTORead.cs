@@ -3,7 +3,7 @@
     public record OrderDTORead(
         int OrderId,
         decimal TotalAmount,
-        string OrderStatus,
+        OrderStatus OrderStatus,
         DateTime OrderDate,
         AddressDTORead ShippingAddress,
         AddressDTORead BillingAddress,

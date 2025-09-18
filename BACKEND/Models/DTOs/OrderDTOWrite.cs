@@ -9,6 +9,6 @@ namespace BACKEND.Models.DTOs
         [Required]
         public int BillingAddresId { get; set; }
         [Required]
-        public List<int> ProductIds { get; set; } = new();
+        public List<int> ProductIds { get; set; } = [];
     }
 }

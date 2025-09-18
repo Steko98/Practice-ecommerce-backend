@@ -43,16 +43,18 @@ namespace BACKEND.Mapping
             CreateMap<PaymentDTOAdminUpdate, Payment>();
 
             CreateMap<ProductOrder, ProductOrderDTO>()
-                .ForCtorParam("ProductId", opt => opt.MapFrom(src => src.Id))
+                .ForCtorParam("ProductId", opt => opt.MapFrom(src => src.ProductId))
                 .ForCtorParam("OrderId", opt => opt.MapFrom(src => src.OrderId))
                 .ForCtorParam("Name", opt => opt.MapFrom(src => src.Product.Name))
                 .ForCtorParam("Price", opt => opt.MapFrom(src => src.Price))
+                .ForCtorParam("Quantity", opt => opt.MapFrom(src => src.Quantity))
                 .ForCtorParam("ImageUrl", opt => opt.MapFrom(src => src.Product.ImageUrl));
             CreateMap<ProductOrder, ProductOrderDTOAdminRead>()
-                .ForCtorParam("ProductId", opt => opt.MapFrom(src => src.Id))
+                .ForCtorParam("ProductId", opt => opt.MapFrom(src => src.ProductId))
                 .ForCtorParam("OrderId", opt => opt.MapFrom(src => src.OrderId))
                 .ForCtorParam("Name", opt => opt.MapFrom(src => src.Product.Name))
                 .ForCtorParam("Price", opt => opt.MapFrom(src => src.Price))
+                .ForCtorParam("Quantity", opt => opt.MapFrom(src => src.Quantity))
                 .ForCtorParam("Sku", opt => opt.MapFrom(src => src.Product.Sku));
             CreateMap<ProductOrderDTOWrite, ProductOrder>();
 
@@ -64,8 +66,8 @@ namespace BACKEND.Mapping
             CreateMap<Order, OrderDTOAdminRead>()
                 .ForCtorParam("OrderId", opt => opt.MapFrom(src => src.Id))
                 .ForCtorParam("UserId", opt => opt.MapFrom(src => src.UserId))
-                .ForCtorParam("ShippingAddress", opt => opt.MapFrom(src => src.ShippingAddressId))
-                .ForCtorParam("BillingAddress", opt => opt.MapFrom(src => src.BillingAddressId))
+                .ForCtorParam("ShippingAddress", opt => opt.MapFrom(src => src.ShippingAddress))
+                .ForCtorParam("BillingAddress", opt => opt.MapFrom(src => src.BillingAddress))
                 .ForCtorParam("Products", opt => opt.MapFrom(src => src.ProductOrders));
             CreateMap<OrderDTOWrite, Order>();
             CreateMap<OrderDTOAdminUpdate, Order>();
@@ -76,11 +78,19 @@ namespace BACKEND.Mapping
                 .ForCtorParam("Price", opt => opt.MapFrom(src => src.Product.Price))
                 .ForCtorParam("ImageUrl", opt => opt.MapFrom(src => src.Product.ImageUrl));
             CreateMap<CartProductDTOWrite, CartProduct>();
+            CreateMap<CartProductDTOUpdate, CartProduct>();
             CreateMap<Cart, CartDTORead>()
-                .ForMember(dest => dest.CartId, opt => opt.MapFrom(src => src.Id))
-                .ForMember(dest => dest.Products, opt => opt.MapFrom(src => src.CartProducts))
-                .ForMember(dest => dest.TotalAmount, opt => opt.MapFrom(
-                    src => src.CartProducts.Sum(cp => cp.Product.Price * cp.Quantity)));
+                .ConstructUsing(src => new CartDTORead(
+                    src.Id,
+                    src.CartProducts.Select(cp => new CartProductDTO(
+                        cp.ProductId,
+                        cp.Product.Name,
+                        cp.Product.Price,
+                        cp.Quantity,
+                        cp.Product.ImageUrl
+                    )).ToList(),
+                    src.CartProducts.Sum(cp => cp.Product.Price * cp.Quantity)
+                    ));
             CreateMap<CartDTOWrite, Cart>();
         }
 

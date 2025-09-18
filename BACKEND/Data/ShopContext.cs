@@ -16,6 +16,7 @@ namespace BACKEND.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartProduct> CartProducts { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<ProductOrder> ProductOrders { get; set; }
 
@@ -81,6 +82,7 @@ namespace BACKEND.Data
                 entity.Property(e => e.OrderDate).HasColumnName("order_date");
                 entity.Property(e => e.ShippingAddressId).HasColumnName("shipping_address_id");
                 entity.Property(e => e.BillingAddressId).HasColumnName("billing_address_id");
+
             });
 
             modelBuilder.Entity<Category>(entity =>

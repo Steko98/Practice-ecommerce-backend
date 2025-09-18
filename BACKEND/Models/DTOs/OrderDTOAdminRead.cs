@@ -4,7 +4,7 @@
         int OrderId,
         int UserId,
         decimal TotalAmount,
-        string OrderStatus,
+        OrderStatus OrderStatus,
         DateTime OrderDate,
         AddressDTORead ShippingAddress,
         AddressDTORead BillingAddress,
