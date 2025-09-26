@@ -9,6 +9,6 @@
         string City,
         string PostalCode,
         string Country,
-        string AddressType
+        AddressType AddressType
         );
 }

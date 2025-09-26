@@ -5,7 +5,7 @@
         Pending,
         Proccessing,
         Shipped,
-        Complete,
+        Completed,
         Cancelled
     }
-}
+} 

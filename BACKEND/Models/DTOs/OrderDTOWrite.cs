@@ -5,9 +5,8 @@ namespace BACKEND.Models.DTOs
     public class OrderDTOWrite
     {
         [Required]
-        public int ShippingAddressId { get; set; }
-        [Required]
-        public int BillingAddresId { get; set; }
+        public int UserId { get; set; }
+
         [Required]
         public List<int> ProductIds { get; set; } = [];
     }

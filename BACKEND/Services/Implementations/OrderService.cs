@@ -39,7 +39,15 @@ namespace BACKEND.Services.Implementations
                 return null;
             }
 
-            return _mapper.Map<List<OrderDTORead>>(orders);
+            try
+            {
+                return _mapper.Map<List<OrderDTORead>>(orders);
+            } catch (Exception ex)
+            {
+                _logger.LogError(ex, "Mapping failed: {Message}", ex.Message);
+                throw;
+            }
+            
         }
 
         public async Task<List<OrderDTOAdminRead>?> AdminGetAllAsync()
@@ -109,7 +117,51 @@ namespace BACKEND.Services.Implementations
         {
             _logger.LogInformation("Creating a new order");
 
+            var user = await _context.Users
+                .Include(u => u.Addresses)
+                .FirstOrDefaultAsync(u => u.Id == dto.UserId);
+
+            var products = await _context.Products
+                .Where(p => dto.ProductIds.Contains(p.Id))
+                .ToListAsync();
+
+            if (!products.Any())
+            {
+                _logger.LogWarning("No valid products found");
+                return null;
+            }
+
+            if (user == null)
+            {
+                _logger.LogWarning("User not found");
+                return null;
+            }
+
+            var shippingAddress = user.Addresses.FirstOrDefault(a => a.AddressType == AddressType.Shipping)
+                ?? user.Addresses.FirstOrDefault();
+            var billingAddress = user.Addresses.FirstOrDefault(a => a.AddressType == AddressType.Billing)
+                ?? user.Addresses.FirstOrDefault();
+
+            if (shippingAddress == null || billingAddress == null)
+            {
+                _logger.LogWarning("User does not have shipping or billing addresses");
+                return null;
+            }
+
             var order = _mapper.Map<Order>(dto);
+            order.OrderDate = DateTime.Now;
+            order.ShippingAddressId = shippingAddress.Id;
+            order.BillingAddressId = billingAddress.Id;
+            foreach (var productId in dto.ProductIds)
+            {
+                order.ProductOrders.Add(new ProductOrder
+                {
+                    ProductId = productId,
+                    Product = products.SingleOrDefault(p => p.Id == productId),
+                    Order = order,
+                    Quantity = 1
+                });
+            }
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
 

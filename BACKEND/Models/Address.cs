@@ -39,6 +39,6 @@
         /// <summary>
         /// Gets or sets the type of the address (e.g., Home, Work).
         /// </summary>
-        public string AddressType { get; set; } = "";
+        public AddressType AddressType { get; set; }
     }
 }

@@ -29,7 +29,12 @@ namespace BACKEND.Mapping
             CreateMap<Address, AddressDTORead>()
                 .ForCtorParam("UserName", opt => opt.MapFrom(src => src.User.FirstName))
                 .ForCtorParam("UserLastName", opt => opt.MapFrom(src => src.User.LastName))
-                .ForCtorParam("AddressId", opt => opt.MapFrom(src => src.Id));
+                .ForCtorParam("AddressId", opt => opt.MapFrom(src => src.Id))
+                .ForCtorParam("AddressLine1", opt => opt.MapFrom(src => src.AddressLine1))
+                .ForCtorParam("AddressLine2", opt => opt.MapFrom(src => src.AddressLine2))
+                .ForCtorParam("City", opt => opt.MapFrom(src => src.City))
+                .ForCtorParam("PostalCode", opt => opt.MapFrom(src => src.PostalCode))
+                .ForCtorParam("Country", opt => opt.MapFrom(src => src.Country));
             CreateMap<AddressDTOWrite, Address>();
 
             CreateMap<Payment, PaymentDTORead>()
